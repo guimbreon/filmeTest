@@ -44,7 +44,7 @@ function generateMovieCards(data) {
 
         const rating = document.createElement('p');
         rating.classList.add('rating');
-        if(isInteger(movie.rating)){
+        if(Number.isInteger(movie.rating)){
             rating.textContent = `Rating: ${'🌕'.repeat(movie.rating)}${'🌑'.repeat(5 - movie.rating)}`;
         }else{
             rating.textContent = `Rating: ${'🌕'.repeat(movie.rating - 0.5)}`;
