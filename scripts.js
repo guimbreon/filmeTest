@@ -44,7 +44,7 @@ function generateMovieCards(data) {
 
         const rating = document.createElement('p');
         rating.classList.add('rating');
-        rating.textContent = `Rating: ${'⭐'.repeat(movie.rating)}${'☆'.repeat(5 - movie.rating)}`;
+        rating.textContent = `Rating: ${'⭐'.repeat(movie.rating)}${'☆'.repeat(10 - movie.rating)}`;
 
         // Append the elements to the card
         card.appendChild(img);
