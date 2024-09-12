@@ -40,7 +40,12 @@ function generateMovieCards(data) {
 
         const comentario = document.createElement('p');
         comentario.classList.add('comentario');
-        comentario.textContent = `Comentário: ${movie.Comentário}`;
+        if(movie.Comentário > 35){
+            comentario.textContent = `Comentário: ${(movie.Comentário).splice(0,36)}...`;
+        }else{
+            comentario.textContent = `Comentário: ${movie.Comentário}`;
+        }
+        
 
         const rating = document.createElement('p');
         rating.classList.add('rating');
