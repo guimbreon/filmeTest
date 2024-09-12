@@ -30,7 +30,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    position: relative; /* Adiciona um contexto de posicionamento para o tooltip */
 }
 
 .filme-card img {
@@ -49,37 +48,9 @@ header {
     margin: 10px 0;
     font-size: 14px;
     color: #6b705c; /* Verde musgo suave */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-    position: relative;
-}
-
-.comentario:hover {
-    cursor: pointer;
 }
 
 .rating {
     font-size: 16px;
     color: #ddbea9; /* Cor dourado suave, inspirado no campo */
-}
-
-.tooltip {
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    display: none; /* Inicialmente escondido */
-    white-space: nowrap;
-    z-index: 10; /* Garante que o tooltip apareça sobre outros elementos */
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
-}
-
-.filme-card:hover .tooltip {
-    display: block; /* Exibe o tooltip quando o mouse está sobre o card */
 }
