@@ -5,14 +5,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3efe0; /* Cor bege suave, para um fundo rústico */
     padding: 20px;
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
+    color: #6b705c; /* Cor verde musgo suave */
 }
 
 .grid-container {
@@ -22,7 +23,7 @@ header {
 }
 
 .filme-card {
-    background-color: #fff;
+    background-color: #fff8e6; /* Fundo de cor creme suave */
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -40,15 +41,16 @@ header {
 .filme-card h2 {
     margin: 10px 0;
     font-size: 20px;
+    color: #cb997e; /* Marrom suave */
 }
 
 .comentario {
     margin: 10px 0;
     font-size: 14px;
-    color: #555;
+    color: #6b705c; /* Verde musgo suave */
 }
 
 .rating {
     font-size: 16px;
-    color: #f39c12;
+    color: #ddbea9; /* Cor dourado suave, inspirado no campo */
 }
