@@ -40,11 +40,12 @@ function generateMovieCards(data) {
 
         const comentario = document.createElement('p');
         comentario.classList.add('comentario');
-        if (movie.Comentário.length > 35) {
-            comentario.textContent = `Comentário:\n${movie.Comentário.substring(0, 23)} ...`;
+        if (movie.Comentário.length >= 23) {
+            comentario.innerHTML = `Comentário:<br>${movie.Comentário.substring(0, 23)} ...`;
         } else {
-            comentario.textContent = `Comentário:\n${movie.Comentário}`;
+            comentario.innerHTML = `Comentário:<br>${movie.Comentário}`;
         }
+        
         
         
 
