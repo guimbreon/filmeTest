@@ -1,23 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3efe0; /* Cor bege suave, para um fundo rústico */
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6b705c; /* Cor verde musgo suave */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
 .filme-card {
+    background-color: #fff8e6; /* Fundo de cor creme suave */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
     position: relative; /* Adiciona um contexto de posicionamento para o tooltip */
 }
 
-.tooltip {
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    display: none; /* Inicialmente escondido */
-    white-space: nowrap;
-    z-index: 10; /* Garante que o tooltip apareça sobre outros elementos */
+.filme-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.filme-card:hover .tooltip {
-    display: block; /* Exibe o tooltip quando o mouse está sobre o card */
+.filme-card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #cb997e; /* Marrom suave */
 }
 
 .comentario {
@@ -33,4 +58,28 @@
 
 .comentario:hover {
     cursor: pointer;
+}
+
+.rating {
+    font-size: 16px;
+    color: #ddbea9; /* Cor dourado suave, inspirado no campo */
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    display: none; /* Inicialmente escondido */
+    white-space: nowrap;
+    z-index: 10; /* Garante que o tooltip apareça sobre outros elementos */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.filme-card:hover .tooltip {
+    display: block; /* Exibe o tooltip quando o mouse está sobre o card */
 }
