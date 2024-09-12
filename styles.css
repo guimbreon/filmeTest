@@ -54,3 +54,54 @@ header {
     font-size: 16px;
     color: #ddbea9; /* Cor dourado suave, inspirado no campo */
 }
+
+/* Smaller Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background (darker for better focus) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff8e6;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 350px; /* Reduced width */
+    width: 90%; /* Adjusted for responsiveness */
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-content h2 {
+    font-size: 18px; /* Slightly smaller font size for the title */
+    color: #cb997e; /* Consistent with your card design */
+}
+
+.modal-content p {
+    font-size: 14px; /* Smaller text for the comments and genre */
+    color: #6b705c; /* Match the card's color theme */
+}
+
+#close-modal {
+    background-color: #ddbea9;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px; /* Smaller close button */
+    margin-top: 10px;
+}

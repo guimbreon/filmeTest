@@ -26,10 +26,11 @@ function generateMovieCards(data) {
     const container = document.getElementById('filme-container');
     container.innerHTML = ''; // Clear existing content
 
-    data.forEach(movie => {
+    data.forEach((movie, index) => {
         // Create movie card elements
         const card = document.createElement('div');
         card.classList.add('filme-card');
+        card.dataset.index = index; // Store index for referencing later
 
         const img = document.createElement('img');
         img.src = `${movie.files}.jpg`; // Image file based on 'files' column in Excel
@@ -45,19 +46,20 @@ function generateMovieCards(data) {
         } else {
             comentario.innerHTML = `Comentário:<br>${movie.Comentário}`;
         }
-        
-        
-        
 
         const rating = document.createElement('p');
         rating.classList.add('rating');
-        if(Number.isInteger(movie.rating)){
+        if (Number.isInteger(movie.rating)) {
             rating.textContent = `Rating: ${'🌕'.repeat(movie.rating)}${'🌑'.repeat(5 - movie.rating)}`;
-        }else{
+        } else {
             rating.textContent = `Rating: ${'🌕'.repeat(movie.rating - 0.5)}`;
-            rating.textContent += `🌗${'🌑'.repeat(5 - movie.rating)}`
+            rating.textContent += `🌗${'🌑'.repeat(5 - movie.rating)}`;
         }
-        
+
+        // Add click event listener for displaying more details
+        card.addEventListener('click', () => {
+            showMovieDetails(movie); // Function to display full details
+        });
 
         // Append the elements to the card
         card.appendChild(img);
@@ -67,5 +69,32 @@ function generateMovieCards(data) {
 
         // Append the card to the container
         container.appendChild(card);
+    });
+}
+
+function showMovieDetails(movie) {
+    // Create a modal or larger card with more information
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    
+    const modalContent = `
+        <div class="modal-content">
+            <h2>${movie.nome}</h2>
+            <img src="${movie.files}.jpg" alt="Poster do filme ${movie.nome}">
+            <p><strong>Rating:</strong> ${movie.rating}</p>
+            <p><strong>Comentário Completo:</strong> ${movie.Comentário}</p>
+            <p><strong>Gêneros:</strong> ${movie.genre}</p>
+            <button id="close-modal">Fechar</button>
+        </div>
+    `;
+    
+    modal.innerHTML = modalContent;
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Close modal functionality
+    document.getElementById('close-modal').addEventListener('click', () => {
+        document.body.removeChild(modal);
     });
 }
