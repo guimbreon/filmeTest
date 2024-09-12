@@ -48,7 +48,7 @@ function generateMovieCards(data) {
             rating.textContent = `Rating: ${'🌕'.repeat(movie.rating)}${'🌑'.repeat(5 - movie.rating)}`;
         }else{
             rating.textContent = `Rating: ${'🌕'.repeat(movie.rating - 0.5)}`;
-            rating.textContent += `🌓${'🌑'.repeat(5 - movie.rating)}`
+            rating.textContent += `🌗${'🌑'.repeat(5 - movie.rating)}`
         }
         
 
