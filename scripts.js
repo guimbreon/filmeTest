@@ -80,7 +80,7 @@ function showMovieDetails(movie) {
     const modalContent = `
         <div class="modal-content">
             <h2>${movie.nome}</h2>
-            <img src="${movie.files}.jpg" alt="Poster do filme ${movie.nome}">
+            <img src="images/${movie.files}.jpg" alt="Poster do filme ${movie.nome}">
             <p><strong>Rating:</strong> ${movie.rating}/5</p>
             <p><strong>Comentário Completo:</strong> ${movie.Comentário}</p>
             <p><strong>Gêneros:</strong> ${movie.genre}</p>
