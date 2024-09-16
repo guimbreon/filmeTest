@@ -33,7 +33,7 @@ function generateMovieCards(data) {
         card.dataset.index = index; // Store index for referencing later
 
         const img = document.createElement('img');
-        img.src = `${movie.files}.jpg`; // Image file based on 'files' column in Excel
+        img.src = `/images/${movie.files}.jpg`; // Image file based on 'files' column in Excel
         img.alt = `Poster do filme ${movie.nome}`;
 
         const title = document.createElement('h2');
@@ -81,7 +81,7 @@ function showMovieDetails(movie) {
         <div class="modal-content">
             <h2>${movie.nome}</h2>
             <img src="${movie.files}.jpg" alt="Poster do filme ${movie.nome}">
-            <p><strong>Rating:</strong> ${movie.rating}</p>
+            <p><strong>Rating:</strong> ${movie.rating}/5</p>
             <p><strong>Comentário Completo:</strong> ${movie.Comentário}</p>
             <p><strong>Gêneros:</strong> ${movie.genre}</p>
             <button id="close-modal">Fechar</button>

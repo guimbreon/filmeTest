@@ -79,6 +79,10 @@ header {
     width: 90%; /* Adjusted for responsiveness */
 }
 
+.modal-content p{
+    padding-bottom: 5px;
+}
+
 .modal-content img {
     width: 100%;
     border-radius: 5px;
