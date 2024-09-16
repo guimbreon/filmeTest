@@ -33,7 +33,7 @@ function generateMovieCards(data) {
         card.dataset.index = index; // Store index for referencing later
 
         const img = document.createElement('img');
-        img.src = `/images/${movie.files}.jpg`; // Image file based on 'files' column in Excel
+        img.src = `images/${movie.files}.jpg`; // Image file based on 'files' column in Excel
         img.alt = `Poster do filme ${movie.nome}`;
 
         const title = document.createElement('h2');
